@@ -10,7 +10,7 @@ const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 
 function App() {
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))  
-  const [theme, setTheme] = React.useState("dark");
+  // const [theme, setTheme] = React.useState("dark");
   return (
     <div className="hero">
       <div>
@@ -35,7 +35,7 @@ function App() {
             <animated.div className="heroone__container" style={{ transform: props.xy.interpolate(trans1) }}>
               <h3 class="heroone__title">WELCOME TO</h3>
               <div>
-              <O3D theme={theme} />
+              <O3D theme={"dark"} />
                 
                 <h2 class="heroone__heading vice-textfx-glitch vice-fx-on" data-vice-textfx="glitch">
                   <span class="vice-textfx-glitch__l0">DHRK VICE</span>
